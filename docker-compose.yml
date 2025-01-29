@@ -28,6 +28,7 @@ services:
       - DOCKER_TLS_VERIFY=1
     volumes:
       - jenkins-data:/var/jenkins_home
+      - ./jenkins_home/init.groovy.d:/var/jenkins_home/init.groovy.d
       - jenkins-docker-certs:/certs/client:ro
     ports:
       - "8080:8080"
